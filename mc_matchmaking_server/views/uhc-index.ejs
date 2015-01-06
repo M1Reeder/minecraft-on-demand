@@ -1,0 +1,29 @@
+<% layout('layout') -%>
+
+<script src="/javascripts/create-instance.js" type="text/javascript" charset="utf-8"></script>
+<div class="row">
+    <div class="large-8 large-push-2 columns">
+        <div class="gray">
+            <h2 class="text-center">UHC</h2>
+        </div>
+        <br>
+        <label>Size: <input id="size" type="text" placeholder="size"></label>
+        <br>
+
+        <div class="teamHolder">
+            <input class="team-name" type="text" placeholder="teamName">
+            <div class="margin-left player-holder">
+                <input class="player" type="text" placeholder="playerName">
+                <button class="button tiny round add-player-btn">+ Player</button>
+            </div>
+        </div>
+        <hr>
+
+        <button class="add-team-btn radius small">New Team</button>
+
+        <div class="gray text-center">
+            <p>Click to create UHC Game</p>
+            <button class="button small create-btn success">Create Game</button>
+        </div>
+    </div>
+</div>

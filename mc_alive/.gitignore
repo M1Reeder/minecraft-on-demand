@@ -1,0 +1,5 @@
+node_modules/
+mc_droplet_server/
+remote_configs/
+alive.stdout.log
+alive.stderr.log

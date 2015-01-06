@@ -1,0 +1,20 @@
+{
+    "serverUrl": "https://s3.amazonaws.com/Minecraft.Download/versions/14w31a/minecraft_server.14w31a.jar",
+    "worldUrl": "local",
+    "size": 1000,
+    "teams": [
+        {
+            "teamName": "team1",
+            "players": [
+                "FeedReed"
+            ]
+        },
+        {
+            "teamName": "team4",
+            "players": [
+                "TubStyle"
+            ]
+        }
+    ],
+    "difficulty": 1
+}

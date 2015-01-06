@@ -1,0 +1,13 @@
+{
+
+    "globals": {
+        "define": true,
+        "require": true,
+        "__filename": true,
+        "__dirname": true,
+        "module": true,
+        "process": true,
+        "console": true,
+        "$": true
+    }
+}

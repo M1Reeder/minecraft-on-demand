@@ -1,0 +1,25 @@
+<h4><i class="fa fa-users"></i> Create A Team</h4>
+<form action="/create-team" method="post" class=" panel callout radius">
+    <div class="row">
+        <div class="large-6 columns">
+            <label> Team Name: <input type="text" name="teamName"></label>
+        </div>
+        <div class="large-6 columns">
+            <label> Banner Pattern:
+            <small>Default Patern:</small>
+            <input type="text" name="banner" value='{Color:15,Pattern:"bs"},{Color:10,Pattern:"mc"}'></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Team Member 1: <input type="text" name="players" value="<%= user.minecraft_name %>" ></label>
+        </div>
+        <div class="large-4 columns">
+            <label>Team Member 2: <input type="text" name="players"></label>
+        </div>
+<!--                     <div class="large-4 columns">
+            <label> Member 3: <input type="text" name="players"></label>
+        </div> -->
+    </div>
+    <button type="submit" class="button alert radius">Create Team</button>
+</form>

@@ -1,0 +1,29 @@
+<!-- views/profile.ejs -->
+<% layout('../layout') -%>
+
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="text-center">
+            <h1><%= user.minecraft_name %></h1>
+        </div>
+    </div>
+</div>
+
+<% if ( typeof message != 'undefined' && message.length > 0) { %>
+    <div class="alert-box warning radius"><%= message %></div>
+<% } %>
+
+
+<div class="row">
+    <div class="large-10 large-centered columns">
+        <% if(user.teams.length === 0) { %>
+            <%- include create-team.ejs %>
+        <% } else { %>
+            <%- include join-game.ejs %>
+        <% } %>
+    </div>
+</div>
+
+
+

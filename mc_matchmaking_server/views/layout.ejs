@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UHC</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/bower_components/foundation/css/foundation.css' />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+
+    <script src="/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/bower_components/modernizr/modernizr.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/bower_components/foundation/js/foundation.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="/">The Golden Apple <i class="fa fa-apple" style="color:#eaee57;"></i></a></h1>
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <% if( typeof user == 'undefined' ){ %>
+                    <li><a href="/signup">Signup</a></li>
+                    <li class="active"><a class="button secondary" href="/login">Login</a></li>
+                <% } else { %>
+                    <li><a href="/profile"><%= user.username %></a></li>
+                    <li class="active"><a href="/logout">Logout</a></li>
+                <% } %>
+
+<!--                 <li class="has-dropdown">
+                    <a href="#">Right Button Dropdown</a>
+                    <ul class="dropdown">
+                        <li><a href="#">First link in dropdown</a></li>
+                    </ul>
+                </li> -->
+            </ul>
+        </section>
+    </nav>
+
+<div class="row">
+    <div class="large-12 columns header-bar">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 large-centered columns">
+        <%- body %>
+    </div>
+</div>
+
+<script>
+    $(document).foundation();
+</script>
+
+</body>
+</html>

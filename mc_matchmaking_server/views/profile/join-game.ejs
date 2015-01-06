@@ -1,0 +1,45 @@
+<script src="/socket.io/socket.io.js"></script>
+<script src="/javascripts/join-game.js" type="text/javascript" charset="utf-8"></script>
+<% var team = user.teams[0]; %>
+<div class="panel radius">
+    <h2><%= team.teamName%></h2>
+    <% for(var i = 0; i < team.players.length; i++){ %>
+         <h5 class="subheader"><i class="fa fa-user"></i></span> <%= team.players[i]%></h5>
+    <% } %>
+    <div class="row">
+        <div class="large-8 columns">
+            <p><strong>Banner Pattern:</strong> <%= team.bannerPattern%></p>
+        </div>
+        <div class="large-4 columns">
+            <form action="/delete-team" method="post" class="right">
+                <button id="delete-team-btn" class="button tiny alert radius">Delete Team</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-6 columns">
+        <button id="join-game-btn" class="button expand success radius">Join Game</button>
+    </div>
+    <div class="large-6 columns">
+        <span id="append"></span>
+    </div>
+</div>
+
+<div id="game-created" style="display: none;">
+    <div class="row">
+        <div class="large-4 columns">
+            <h4>Opponents</h4>
+            <hr>
+            <ul class="small-block-grid-1 render-teams"></ul>
+        </div>
+        <div class="large-8 columns">
+            <div class="text-right">
+                <h4>Server</h4>
+                <hr>
+                <div id="game-data"></div>
+            </div>
+        </div>
+    </div>
+</div>
