@@ -2,8 +2,8 @@
 var config = require('./config.js');
 
 var ObjApi = require('digitalocean').Api;
-var api = new ObjApi('a8738f840f3660ea8a7e71549816202e', '2f62c296280433869d9e9482785c5607');
-var token = '87cfccb080cc721b3cd820a9d628d798a9176bb6809568990c8d91459dca0a57';
+var api = new ObjApi('x', 'y');
+var token = 'z';
 var exec = require('child_process').exec;
 var image_id = 5450496;
 
